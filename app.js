@@ -1,63 +1,39 @@
-// assignment no 14
-// Chapter no 35 Function
+function sum(a, b, c) {
+  console.log(a + b + c);
+}
+sum(32, 56, 97);
 
-// Question no 1
-function displayCurrentTime() {
-  var now = new Date();
-  var hours = now.getHours();
-  var minutes = now.getMinutes();
-  var seconds = now.getSeconds();
-  var timeString = hours + ":" + minutes + ":" + seconds;
-  document.write("<h1>" + timeString + "</h1>");
+function sub(a, b, c) {
+  console.log(a - b - c);
 }
+sub(32, 56, 97);
 
-displayCurrentTime();
+function mod(a, b, c, d) {
+  console.log(((a % b) % c) % d);
+}
+mod(22, 56, 97, 98);
 
-// Question no 2
-function greetUser(firstName, lastName) {
-  var fullName = firstName + " " + lastName;
-  alert("Hello, " + fullName + "!");
+function divide(a, b, c, d, e) {
+  console.log(a / b / c / d / e);
 }
+divide(16, 23, 45, 12, 17);
 
-var firstName = prompt("Enter your first name:");
-var lastName = prompt("Enter your last name:");
-greetUser(firstName, lastName);
-// Question no 3
-function addNumbers(num1, num2) {
-  var sum = num1 + num2;
-  return sum;
+function mul(a, b, c) {
+  console.log(12 * 2 * 4);
 }
-var result = addNumbers(5, 7);
-console.log("The sum of 5 and 7 is: " + result);
-// Question no 4
-function calculateArea(radius) {
-  var area = Math.PI * radius * radius;
-  return area;
+mul(12, 2, 4);
+
+var food = prompt(" Enter food name:");
+switch (food.toLowerCase()) {
+  case "biryani":
+    console.log("2 KG biryani le ao ");
+    break;
+  case "nihari":
+    console.log("3 Kg Nihari le ao");
+    break;
+  case "burger":
+    console.log("2 burger le ao");
+    break;
+  default:
+    console.log("I don't like that");
 }
-var radius = 5;
-var area = calculateArea(radius);
-console.log("The area of a circle with radius " + radius + " is: " + area);
-// Question no 5
-function calculateSalesTax(price, taxRate) {
-  var salesTax = price * (taxRate / 100);
-  return salesTax;
-}
-var price = 100;
-var taxRate = 10;
-var salesTax = calculateSalesTax(price, taxRate);
-console.log(
-  "The sales tax on a product priced at $" +
-    price +
-    " with a tax rate of " +
-    taxRate +
-    "% is: $" +
-    salesTax
-);
-// Question no 6
-function convertCelsiusToFahrenheit(celsius) {
-  var fahrenheit = (celsius * 9) / 5 + 32;
-  return fahrenheit;
-}
-var celsius = 25;
-var fahrenheit = convertCelsiusToFahrenheit(celsius);
-console.log(celsius + "°C is equal to " + fahrenheit + "°F");
